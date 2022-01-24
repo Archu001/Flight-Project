@@ -1,0 +1,72 @@
+<div class="flight">
+    <h3>SpaceX Launch Programs</h3>
+    <div class="row">
+        <div class="col-lg-2 col-12 col-md-4">
+            <div class="card card1">
+                <h5>Filters</h5>
+                <h6 id="year">Launch Year</h6>
+                <div class="row">
+                    <div class="col-md-6 col-6 col-lg-12">
+                        <button type="button" class="btn btn-success" (click)="sendAll('2006')">2006</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2008')">2008</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2010')">2010</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2012')">2012</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2014')">2014</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2016')">2016</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2018')">2018</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2020')">2020</button>
+                    </div>
+                    <div class="col-md-6 col-6 col-lg-12">
+                        <button type="button" class="btn btn-success" (click)="sendAll('2007')">2007</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2009')">2009</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2011')">2011</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2013')">2013</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2015')">2015</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2017')">2017</button>
+                        <button type="button" class="btn btn-success" (click)="sendAll('2019')">2019</button>
+                    </div>
+                </div>
+
+                <h6 id="year">Successfully Launch </h6>
+                <div class="row">
+                    <div class="col-6 col-lg-12 col-xl-6">
+                        <button type="button" class="btn btn-success" (click)="sendLaunch('True')">True</button>
+                    </div>
+                    <div class="col-6 col-lg-12 col-xl-6">
+                        <button type="button" class="btn btn-success" (click)="sendLaunch('False')">False</button>
+                    </div>
+                </div>
+
+                <h6 id="year">Successfully Landing </h6>
+                <div class="row">
+                    <div class="col-6 col-lg-12 col-xl-6">
+                        <button type="button" class="btn btn-success" (click)="sendLandandLaunch('True')">True</button>
+                    </div>
+                    <div class="col-6 col-lg-12 col-xl-6">
+                        <button type="button" class="btn btn-success"
+                            (click)="sendLandandLaunch('False')">False</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      <div class="col-lg-10 col-12 col-md-8">
+          <div class="row">
+              <div class="col-lg-4 col-md-6 col-xl-3 fly" *ngFor="let flights of flightData">
+               <div class="card">
+                   <div class="card-header"><img class="img-responsive" src="{{flights.links.mission_patch}}"></div>
+               </div>
+               <div class="card-body">
+                   <b class="head1">{{flights.mission_name}} * {{flights.flight_number}}</b><br><br>
+                   <b> Mission Ids:</b>{{flights.mission_id[0]}}<br>
+                   <b>Launch Year:</b>{{flights.launch_year}}<br>
+                   <b>Successful Launch:</b>{{flights.launch_success}}<br>
+                   <b>Successful Landing:</b>{{flights.rocket.first_stage.cores[0].land_success}}
+               </div>
+              </div>
+          </div>
+      </div>
+
+</div>
+
+</div>

@@ -1,0 +1,45 @@
+
+    
+.flight {
+    margin: 30px;
+    background-color: #ededed;
+    padding: 20px;
+}
+
+.btn{
+
+    margin: 5px;
+    height: 25px;
+}
+#year{
+
+    text-align: center;
+    text-decoration: underline;
+}
+.card{
+    border-radius: 5px;
+}
+.card1 {
+    margin: 10% 0% 0% 0%;
+}
+.card:hover{
+    border: 1px solid silver;
+
+}
+img{
+    height:150px;
+    width: 100%;
+   
+
+}
+.fly{
+    padding: 10px;
+    
+}
+
+.head1 {
+    color: blue;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
